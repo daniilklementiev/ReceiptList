@@ -5,7 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ReceiptList"
         mc:Ignorable="d"
-        Title="Реценты настоящего Бандеровца" Height="720" Width="1240" Loaded="Window_Loaded">
+        Title="Реценты настоящего Бандеровца" Height="720" Width="1240" Loaded="Window_Loaded"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -14,6 +22,7 @@
         
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
         
@@ -36,6 +45,9 @@
                 <Paragraph>Steps</Paragraph>
             </FlowDocument>
         </FlowDocumentReader>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Button>Press me</Button>
+        </StackPanel>
 
     </Grid>
 </Window>
